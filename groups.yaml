@@ -1,0 +1,6 @@
+frontyard:
+  name: Entry Lights
+  entities:
+    - light.garagel
+    - light.garager
+    - light.front_door

@@ -1,0 +1,3568 @@
+- id: '1633400699416'
+  name: Halloween
+  entities:
+    switch.driveway:
+      friendly_name: Driveway
+      state: 'on'
+    light.front_door:
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 128
+      hs_color:
+      - 30
+      - 100
+      rgb_color:
+      - 255
+      - 127
+      - 0
+      xy_color:
+      - 0.612
+      - 0.374
+      friendly_name: Front Door
+      supported_features: 32
+      state: 'on'
+    light.office:
+      min_mireds: 111
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 46
+      hs_color:
+      - 285
+      - 100
+      rgb_color:
+      - 191
+      - 0
+      - 255
+      xy_color:
+      - 0.301
+      - 0.116
+      friendly_name: Office
+      supported_features: 32
+      state: 'on'
+    light.wled:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      intensity: 128
+      palette: Default
+      reverse: false
+      speed: 128
+      friendly_name: WLED
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'off'
+    select.wled_preset:
+      options:
+      - flash
+      - halloween
+      - loading
+      - movie
+      friendly_name: WLED Preset
+      icon: mdi:playlist-play
+      state: unknown
+  icon: mdi:halloween
+- id: '1634277060651'
+  name: Morning Work
+  entities:
+    light.office:
+      min_mireds: 111
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 178
+      color_temp: 327
+      hs_color:
+      - 27.732
+      - 55.342
+      rgb_color:
+      - 255
+      - 179
+      - 113
+      xy_color:
+      - 0.491
+      - 0.383
+      current_power_w: 7.8
+      daily_energy_kwh: 0.009
+      monthly_energy_kwh: 0.578
+      friendly_name: Office
+      supported_features: 19
+      state: 'on'
+- id: '1635743495032'
+  name: Night
+  entities:
+    switch.string_lights:
+      friendly_name: Cabana
+      state: 'off'
+    switch.outside_plug:
+      friendly_name: Xmas Yard
+      icon: mdi:string-lights
+      state: 'off'
+    light.wled_garage:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      intensity: 171
+      palette: Cloud
+      reverse: false
+      speed: 112
+      friendly_name: WLED-garage
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'off'
+    select.wled_garage_playlist:
+      options: []
+      friendly_name: WLED-garage Playlist
+      icon: mdi:play-speed
+      state: unavailable
+    select.wled_garage_preset:
+      options:
+      - XmasBouncy
+      - XmasCandy
+      - XmasFireworks
+      - XmasWipe
+      friendly_name: WLED-garage Preset
+      icon: mdi:playlist-play
+      state: unknown
+    select.wled_garage_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Color Palette
+      icon: mdi:palette-outline
+      state: Cloud
+    switch.wled_garage_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: WLED-garage Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_garage_sync_send:
+      udp_port: 21324
+      friendly_name: WLED-garage Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_garage_sync_receive:
+      udp_port: 21324
+      friendly_name: WLED-garage Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    number.wled_garage_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Speed
+      icon: mdi:speedometer
+      state: '112'
+    number.wled_garage_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Intensity
+      state: '171'
+    light.wled_garage_master:
+      supported_color_modes:
+      - brightness
+      friendly_name: Roof
+      icon: mdi:led-off
+      supported_features: 32
+      state: 'off'
+    light.wled_garage_segment_1:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: Bouncing Balls
+      intensity: 121
+      palette: Splash
+      reverse: false
+      speed: 82
+      friendly_name: WLED-garage Segment 1
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    number.wled_garage_segment_1_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 1 Speed
+      icon: mdi:speedometer
+      state: '82'
+    number.wled_garage_segment_1_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 1 Intensity
+      state: '121'
+    select.wled_garage_segment_1_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Segment 1 Color Palette
+      icon: mdi:palette-outline
+      state: Splash
+    light.wled_garage_segment_2:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: Bouncing Balls
+      intensity: 128
+      palette: Fire
+      reverse: false
+      speed: 128
+      friendly_name: WLED-garage Segment 2
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    number.wled_garage_segment_2_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 2 Speed
+      icon: mdi:speedometer
+      state: '128'
+    number.wled_garage_segment_2_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 2 Intensity
+      state: '128'
+    select.wled_garage_segment_2_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Segment 2 Color Palette
+      icon: mdi:palette-outline
+      state: Fire
+    light.wled_garage_segment_3:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: Bouncing Balls
+      intensity: 128
+      palette: Drywet
+      reverse: false
+      speed: 128
+      friendly_name: WLED-garage Segment 3
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    number.wled_garage_segment_3_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 3 Speed
+      icon: mdi:speedometer
+      state: '128'
+    number.wled_garage_segment_3_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 3 Intensity
+      state: '128'
+    select.wled_garage_segment_3_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Segment 3 Color Palette
+      icon: mdi:palette-outline
+      state: Drywet
+    light.wled_garage_segment_4:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: Bouncing Balls
+      intensity: 128
+      palette: Fairy Reaf
+      reverse: false
+      speed: 128
+      friendly_name: WLED-garage Segment 4
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    number.wled_garage_segment_4_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 4 Speed
+      icon: mdi:speedometer
+      state: '128'
+    number.wled_garage_segment_4_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 4 Intensity
+      state: '128'
+    select.wled_garage_segment_4_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Segment 4 Color Palette
+      icon: mdi:palette-outline
+      state: Fairy Reaf
+    light.wled_garage_segment_5:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: Bouncing Balls
+      intensity: 171
+      palette: Cloud
+      reverse: false
+      speed: 112
+      friendly_name: WLED-garage Segment 5
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    number.wled_garage_segment_5_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 5 Speed
+      icon: mdi:speedometer
+      state: '112'
+    number.wled_garage_segment_5_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 5 Intensity
+      state: '171'
+    select.wled_garage_segment_5_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Segment 5 Color Palette
+      icon: mdi:palette-outline
+      state: Cloud
+    light.wled_garage_segment_6:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: Ripple
+      intensity: 121
+      palette: Splash
+      reverse: false
+      speed: 82
+      friendly_name: WLED-garage Segment 6
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    number.wled_garage_segment_6_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 6 Speed
+      icon: mdi:speedometer
+      state: '82'
+    number.wled_garage_segment_6_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Segment 6 Intensity
+      state: '121'
+    select.wled_garage_segment_6_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Segment 6 Color Palette
+      icon: mdi:palette-outline
+      state: Splash
+    light.wled_garage_segment_7:
+      restored: true
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      supported_features: 36
+      friendly_name: WLED-garage Segment 7
+      icon: mdi:led-strip-variant
+      state: unavailable
+    number.wled_garage_segment_7_speed:
+      restored: true
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      supported_features: 0
+      friendly_name: WLED-garage Segment 7 Speed
+      icon: mdi:speedometer
+      state: unavailable
+    number.wled_garage_segment_7_intensity:
+      restored: true
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      supported_features: 0
+      friendly_name: WLED-garage Segment 7 Intensity
+      state: unavailable
+    select.wled_garage_segment_7_color_palette:
+      restored: true
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      supported_features: 0
+      friendly_name: WLED-garage Segment 7 Color Palette
+      icon: mdi:palette-outline
+      state: unavailable
+    light.wled_window_master:
+      supported_color_modes:
+      - brightness
+      friendly_name: Windows
+      icon: mdi:led-off
+      supported_features: 32
+      state: 'off'
+    light.wled_window:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: Colortwinkles
+      intensity: 131
+      palette: Aurora 2
+      reverse: false
+      speed: 128
+      friendly_name: WLED-window
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    light.wled_window_segment_1:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: Colortwinkles
+      intensity: 131
+      palette: Aurora 2
+      reverse: false
+      speed: 128
+      friendly_name: WLED-window Segment 1
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    select.wled_window_playlist:
+      options: []
+      friendly_name: WLED-window Playlist
+      icon: mdi:play-speed
+      state: unavailable
+    select.wled_window_preset:
+      options:
+      - Window Twinkle
+      friendly_name: WLED-window Preset
+      icon: mdi:playlist-play
+      state: unknown
+    select.wled_window_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-window Color Palette
+      icon: mdi:palette-outline
+      state: Aurora 2
+    select.wled_window_segment_1_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-window Segment 1 Color Palette
+      icon: mdi:palette-outline
+      state: Aurora 2
+    switch.wled_window_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: WLED-window Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_window_sync_send:
+      udp_port: 21324
+      friendly_name: WLED-window Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_window_sync_receive:
+      udp_port: 21324
+      friendly_name: WLED-window Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    number.wled_window_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Speed
+      icon: mdi:speedometer
+      state: '128'
+    number.wled_window_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Intensity
+      state: '131'
+    number.wled_window_segment_1_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Segment 1 Speed
+      icon: mdi:speedometer
+      state: '128'
+    number.wled_window_segment_1_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Segment 1 Intensity
+      state: '131'
+    switch.christmas_tree:
+      friendly_name: Christmas Tree
+      icon: mdi:pine-tree
+      state: 'off'
+    switch.back_door_lights:
+      friendly_name: Back Door
+      icon: mdi:string-lights
+      state: 'off'
+    switch.little_tree:
+      friendly_name: Little Tree
+      icon: mdi:pine-tree
+      state: 'off'
+    light.front_door:
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 128
+      hs_color:
+      - 150
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 127
+      xy_color:
+      - 0.164
+      - 0.591
+      friendly_name: Front Door
+      icon: mdi:coach-lamp
+      supported_features: 32
+      state: 'on'
+    light.garagel:
+      min_mireds: 111
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 130
+      hs_color:
+      - 135
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 63
+      xy_color:
+      - 0.17
+      - 0.703
+      friendly_name: GarageL
+      icon: mdi:coach-lamp
+      supported_features: 32
+      state: 'on'
+    light.garager:
+      min_mireds: 111
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 130
+      hs_color:
+      - 135
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 63
+      xy_color:
+      - 0.17
+      - 0.703
+      friendly_name: GarageR
+      icon: mdi:coach-lamp
+      supported_features: 32
+      state: 'on'
+  icon: mdi:weather-night
+- id: '1638059485691'
+  name: Christmas
+  entities:
+    switch.christmas_tree:
+      friendly_name: Christmas Tree
+      icon: mdi:pine-tree
+      state: 'on'
+    light.front_door:
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 128
+      hs_color:
+      - 135
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 63
+      xy_color:
+      - 0.17
+      - 0.703
+      friendly_name: Front Door
+      supported_features: 32
+      state: 'on'
+    switch.little_tree:
+      friendly_name: Little Tree
+      icon: mdi:pine-tree
+      state: 'on'
+    switch.string_lights:
+      friendly_name: Cabana
+      state: 'on'
+    switch.outside_plug:
+      friendly_name: Xmas Yard
+      icon: mdi:string-lights
+      state: 'on'
+    light.wled_window_master:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 128
+      friendly_name: Windows
+      icon: mdi:led-off
+      supported_features: 32
+      state: 'on'
+    light.wled_window:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: Colortwinkles
+      intensity: 131
+      palette: Aurora 2
+      reverse: false
+      speed: 128
+      friendly_name: WLED-window
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    light.wled_window_segment_1:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: Colortwinkles
+      intensity: 131
+      palette: Aurora 2
+      reverse: false
+      speed: 128
+      friendly_name: WLED-window Segment 1
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    select.wled_window_playlist:
+      options: []
+      friendly_name: WLED-window Playlist
+      icon: mdi:play-speed
+      state: unavailable
+    select.wled_window_preset:
+      options:
+      - Window Twinkle
+      friendly_name: WLED-window Preset
+      icon: mdi:playlist-play
+      state: Window Twinkle
+    select.wled_window_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-window Color Palette
+      icon: mdi:palette-outline
+      state: Aurora 2
+    select.wled_window_segment_1_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-window Segment 1 Color Palette
+      icon: mdi:palette-outline
+      state: Aurora 2
+    switch.wled_window_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: WLED-window Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_window_sync_send:
+      udp_port: 21324
+      friendly_name: WLED-window Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_window_sync_receive:
+      udp_port: 21324
+      friendly_name: WLED-window Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    number.wled_window_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Speed
+      icon: mdi:speedometer
+      state: '128'
+    number.wled_window_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Intensity
+      state: '131'
+    number.wled_window_segment_1_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Segment 1 Speed
+      icon: mdi:speedometer
+      state: '128'
+    number.wled_window_segment_1_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-window Segment 1 Intensity
+      state: '131'
+    light.wled_garage:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgb
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: Bouncing Balls
+      intensity: 171
+      palette: Cloud
+      reverse: false
+      speed: 112
+      friendly_name: WLED-garage
+      icon: mdi:led-strip-variant
+      supported_features: 36
+      state: 'on'
+    select.wled_garage_playlist:
+      options: []
+      friendly_name: WLED-garage Playlist
+      icon: mdi:play-speed
+      state: unavailable
+    select.wled_garage_preset:
+      options:
+      - XmasBouncy
+      - XmasCandy
+      - XmasFireworks
+      - XmasWipe
+      friendly_name: WLED-garage Preset
+      icon: mdi:playlist-play
+      state: XmasBouncy
+    select.wled_garage_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      friendly_name: WLED-garage Color Palette
+      icon: mdi:palette-outline
+      state: Cloud
+    switch.wled_garage_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: WLED-garage Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_garage_sync_send:
+      udp_port: 21324
+      friendly_name: WLED-garage Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_garage_sync_receive:
+      udp_port: 21324
+      friendly_name: WLED-garage Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    number.wled_garage_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Speed
+      icon: mdi:speedometer
+      state: '112'
+    number.wled_garage_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-garage Intensity
+      state: '171'
+    light.wled_garage_master:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 108
+      friendly_name: Roof
+      icon: mdi:led-off
+      supported_features: 32
+      state: 'on'
+    switch.back_door_lights:
+      friendly_name: Back Door
+      icon: mdi:string-lights
+      state: 'on'
+    light.garager:
+      min_mireds: 111
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 130
+      hs_color:
+      - 135
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 63
+      xy_color:
+      - 0.17
+      - 0.703
+      friendly_name: GarageR
+      supported_features: 32
+      state: 'on'
+    light.garagel:
+      min_mireds: 111
+      max_mireds: 400
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 130
+      hs_color:
+      - 135
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 63
+      xy_color:
+      - 0.17
+      - 0.703
+      friendly_name: GarageL
+      supported_features: 32
+      state: 'on'
+  icon: mdi:string-lights

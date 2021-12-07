@@ -1,0 +1,110 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+sabnzbd:
+  api_key: 249a2781a37e9c5f9eec77d42ded9422
+  host: 192.168.29.208
+  name: sabnzbd
+  port: 8080
+  sensors:
+    - current_status
+    - speed
+    - queue_count
+    - queue_size
+    - queue_remaining
+    - disk_size
+    - disk_free
+    - total_size
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.20.0.0/24 #nginx subnet, make sure this is updated if subnet changes
+    - 192.168.29.0/24
+    - 192.168.29.1
+
+# Tautulli configuration.yaml entry
+# sensor:
+#   - platform: tautulli
+#     api_key: 709ed244cf484a738b15b1262bd6a33b
+#     host: 192.168.29.208
+
+logger:
+  default: info
+  logs:
+    pydeconz: debug
+    homeassistant.components.deconz: debug
+
+influxdb:
+  host: a0d7b954-influxdb
+  port: 8086
+  database: homeassistant
+  username: homeassistant
+  password: homeassistant
+  max_retries: 3
+  default_measurement: state
+
+  # Example filter to include specified domains and exclude specified entities
+  include:
+    # domains:
+    #   - alarm_control_panel
+    #   - light
+    entity_globs:
+      - sensor.6c_total_watts
+      - sensor.*
+    # exclude:
+    # entities:
+    #   - light.kitchen_light
+
+switch:
+  - platform: template
+    switches:
+      front_flowers:
+        value_template: "{{ is_state('binary_sensor.front_flowers_station_running', 'on') }}"
+        turn_on:
+          service: opensprinkler.run
+          data_template:
+            entity_id: binary_sensor.front_flowers_station_running
+            # Run seconds uses the input_number below.
+            run_seconds: "{{ ((states('input_number.s01_station_minutes') | float) * 60) | int }}"
+        turn_off:
+          service: opensprinkler.stop
+          data:
+            entity_id: binary_sensor.front_flowers_station_running
+
+      back_flowers:
+        value_template: "{{ is_state('binary_sensor.back_flowers_station_running', 'on') }}"
+        turn_on:
+          service: opensprinkler.run
+          data_template:
+            entity_id: binary_sensor.back_flowers_station_running
+            # Run seconds uses the input_number below.
+            run_seconds: "{{ ((states('input_number.s02_station_minutes') | float) * 60) | int }}"
+        turn_off:
+          service: opensprinkler.stop
+          data:
+            entity_id: binary_sensor.back_flowers_station_running
+
+input_number:
+  front_flowers_station_minutes:
+    initial: 1
+    min: 1
+    max: 60
+    step: 1
+  back_flowers_station_minutes:
+    initial: 1
+    min: 1
+    max: 60
+    step: 1                      

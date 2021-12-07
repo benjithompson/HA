@@ -1,0 +1,108 @@
+- id: '1628946413065'
+  alias: Water Sensor Wet
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 8d06ded68fca668a4844deb9ff89d404
+    entity_id: binary_sensor.water_sensor
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      message: Water Sensor Wet!!!
+      title: Sensor Alert
+  - service: notify.persistent_notification
+    data:
+      message: Water Sensor has become wet!
+      title: Sensor Alert
+  mode: single
+- id: '1631256431703'
+  alias: Low battery level detection & notification for all battery sensors
+  description: ''
+  use_blueprint:
+    path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      threshold: 10
+      time: 06:00:00
+      day: 7
+      exclude:
+        entity_id: []
+        device_id:
+        - 876e673f882199fbe64d4c0cc5ea2bb7
+        - 26ee004296d72bcdf636d2a855c4e27b
+      actions:
+      - device_id: 26ee004296d72bcdf636d2a855c4e27b
+        domain: mobile_app
+        type: notify
+        title: HA battery alert
+        message: device {{sensors}} low battery
+- id: '1633399681888'
+  alias: Sunset Lights
+  description: Activate Night Scene
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - scene: scene.night
+  mode: single
+- id: '1633400011306'
+  alias: Sunrise Lights
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: '-20'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: bc609ed39b7c9b82b7c89fb0eee93a1c
+    entity_id: light.garagel
+    domain: light
+  - type: turn_off
+    device_id: b46041f984bbf37d86d7e020bd09ee72
+    entity_id: light.front_door
+    domain: light
+  - type: turn_off
+    device_id: d8b7567e08c096b4d304dcb5b70d0335
+    entity_id: light.garager
+    domain: light
+  mode: single
+- id: '1633761277804'
+  alias: Morning Alarm
+  description: Send Webhook when morning Work alarm is disabled
+  trigger:
+  - platform: webhook
+    webhook_id: alarm20211010
+  condition: []
+  action:
+  - scene: scene.morning_work
+  mode: single
+- id: '1638059604866'
+  alias: Turn On Christmas Lights
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-30'
+  condition: []
+  action:
+  - scene: scene.christmas
+  mode: single
+- id: '1638144567394'
+  alias: Sleep Time
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:15:00'
+  condition: []
+  action:
+  - scene: scene.night
+  mode: single

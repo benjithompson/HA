@@ -1,0 +1,5 @@
+binary_sensor.openclose_2:
+  icon: hass:square
+  device_class: window
+sensor.sabnzbd_disk_free:
+  friendly_name: Disk Free

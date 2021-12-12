@@ -63,12 +63,12 @@
   condition: []
   action:
   - type: turn_off
-    device_id: bc609ed39b7c9b82b7c89fb0eee93a1c
-    entity_id: light.garagel
-    domain: light
-  - type: turn_off
     device_id: b46041f984bbf37d86d7e020bd09ee72
     entity_id: light.front_door
+    domain: light
+  - type: turn_off
+    device_id: bc609ed39b7c9b82b7c89fb0eee93a1c
+    entity_id: light.garagel
     domain: light
   - type: turn_off
     device_id: d8b7567e08c096b4d304dcb5b70d0335
@@ -91,7 +91,7 @@
   trigger:
   - platform: sun
     event: sunset
-    offset: '-30'
+    offset: '-35'
   condition: []
   action:
   - scene: scene.christmas

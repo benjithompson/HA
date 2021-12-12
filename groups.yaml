@@ -3,4 +3,4 @@ frontyard:
   entities:
     - light.garagel
     - light.garager
-    - light.front_door
+    - light.front_door_light

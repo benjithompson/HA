@@ -17,7 +17,7 @@
   - service: notify.notify
     data:
       message: Water Sensor Wet!!!
-      title: Sensor Alert
+      title: Home Assistant
   - service: notify.persistent_notification
     data:
       message: Water Sensor has become wet!
@@ -64,7 +64,7 @@
   action:
   - type: turn_off
     device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door
+    entity_id: light.front_door_light
     domain: light
   - type: turn_off
     device_id: bc609ed39b7c9b82b7c89fb0eee93a1c
@@ -94,6 +94,19 @@
     offset: '-35'
   condition: []
   action:
+  - type: turn_on
+    device_id: 5281d3bc61d08e3aa7041f0540acb092
+    entity_id: switch.wled_garage_switch
+    domain: switch
+  - type: turn_on
+    device_id: b73b622f464a9ebf798edd4f63157852
+    entity_id: switch.wled_window_switch
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 15
+      milliseconds: 0
   - scene: scene.christmas
   mode: single
 - id: '1638144567394'
@@ -105,4 +118,123 @@
   condition: []
   action:
   - scene: scene.night
+  mode: single
+- id: '1640560137721'
+  alias: Doorbell
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 37498442d18cbd950e943187e03d3684
+    type: action
+    subtype: bell1
+    discovery_id: 0x0008890001d9a85f action_bell1
+  condition: []
+  action:
+  - type: turn_on
+    device_id: b46041f984bbf37d86d7e020bd09ee72
+    entity_id: light.front_door_light
+    domain: light
+    brightness_pct: 50
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - type: turn_on
+    device_id: b46041f984bbf37d86d7e020bd09ee72
+    entity_id: light.front_door_light
+    domain: light
+    brightness_pct: 5
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - type: turn_on
+    device_id: b46041f984bbf37d86d7e020bd09ee72
+    entity_id: light.front_door_light
+    domain: light
+    brightness_pct: 5
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - type: turn_on
+    device_id: b46041f984bbf37d86d7e020bd09ee72
+    entity_id: light.front_door_light
+    domain: light
+    brightness_pct: 50
+  - service: notify.persistent_notification
+    data:
+      message: Doorbell beep boop!
+      title: Home Assistant
+  - service: notify.notify
+    data:
+      message: Doorbell beep boop
+      title: Home Assistant
+  - condition: sun
+    before: sunset
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - type: turn_on
+    device_id: b46041f984bbf37d86d7e020bd09ee72
+    entity_id: light.front_door_light
+    domain: light
+    brightness_pct: 5
+  - type: turn_off
+    device_id: b46041f984bbf37d86d7e020bd09ee72
+    entity_id: light.front_door_light
+    domain: light
+  mode: single
+- id: '1640647620411'
+  alias: Office Light Motion Detected
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      motion_entity: binary_sensor.aqara_motion_sensor_occupancy
+      light_target:
+        device_id: 20d5d7cb30ac6372542d04e881afc7cd
+- id: '1640666070764'
+  alias: New Years
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.new_year
+  condition: []
+  action:
+  - device_id: e6a5453b6e2cb3a3f309817d00432e99
+    domain: select
+    entity_id: select.wled_garage_preset
+    type: select_option
+    option: New Years Countdown
+  - device_id: e04095a62b12beede38217328dc52760
+    domain: select
+    entity_id: select.wled_window_preset
+    type: select_option
+    option: New Years Countdown
+  mode: single
+- id: '1640666426457'
+  alias: New Years Countdown
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.new_years_countdown
+  condition: []
+  action:
+  - device_id: e6a5453b6e2cb3a3f309817d00432e99
+    domain: select
+    entity_id: select.wled_garage_preset
+    type: select_option
+    option: New Years Countdown
+  - device_id: e04095a62b12beede38217328dc52760
+    domain: select
+    entity_id: select.wled_window_preset
+    type: select_option
+    option: New Years Countdown
   mode: single

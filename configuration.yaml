@@ -68,6 +68,22 @@ influxdb:
     # entities:
     #   - light.kitchen_light
 
+#cyberpower usage in watts (by default only has load percentage and nominal output which is 810watts total)
+template:
+  - sensor:
+      - name: "cyberpower_usage_watts"
+        state: "{{states('sensor.cyberpower_ups_nominal_real_power')|float(0) * states('sensor.cyberpower_ups_load')|float(0) * 0.01}}"
+        unit_of_measurement: "W"
+        state_class: measurement
+        device_class: power
+        unique_id: cp_usage_watts
+  - sensor:
+      - name: "cyberpower_usage_watthours"
+        state: "{{states('sensor.cyberpower_ups_nominal_real_power')|float(0) * states('sensor.cyberpower_ups_load')|float(0) * 0.00001 }}"
+        unit_of_measurement: "kWh"
+        state_class: measurement
+        unique_id: cp_usage_watthours
+
 switch:
   - platform: template
     switches:
@@ -107,4 +123,4 @@ input_number:
     initial: 1
     min: 1
     max: 60
-    step: 1                      
+    step: 1

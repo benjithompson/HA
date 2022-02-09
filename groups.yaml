@@ -1,6 +1,6 @@
 frontyard:
   name: Entry Lights
   entities:
-    - light.garagel
-    - light.garager
+    - light.zigbee_led_bulb_1
+    - light.zigbee_led_bulb_2
     - light.front_door_light

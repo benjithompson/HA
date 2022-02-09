@@ -4,23 +4,22 @@
   trigger:
   - type: moist
     platform: device
-    device_id: 8d06ded68fca668a4844deb9ff89d404
-    entity_id: binary_sensor.water_sensor
+    device_id: 457a0b5f2b117c3931e0d6e3b8547af8
+    entity_id: binary_sensor.aqara_water_sensor_water_leak
     domain: binary_sensor
     for:
       hours: 0
       minutes: 0
-      seconds: 5
-      milliseconds: 0
+      seconds: 0
   condition: []
   action:
   - service: notify.notify
     data:
-      message: Water Sensor Wet!!!
+      message: Water Sensor wet
       title: Home Assistant
   - service: notify.persistent_notification
     data:
-      message: Water Sensor has become wet!
+      message: Water Sensor wet
       title: Sensor Alert
   mode: single
 - id: '1631256431703'
@@ -43,16 +42,6 @@
         type: notify
         title: HA battery alert
         message: device {{sensors}} low battery
-- id: '1633399681888'
-  alias: Sunset Lights
-  description: Activate Night Scene
-  trigger:
-  - platform: sun
-    event: sunset
-  condition: []
-  action:
-  - scene: scene.night
-  mode: single
 - id: '1633400011306'
   alias: Sunrise Lights
   description: ''
@@ -62,62 +51,7 @@
     offset: '-20'
   condition: []
   action:
-  - type: turn_off
-    device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door_light
-    domain: light
-  - type: turn_off
-    device_id: bc609ed39b7c9b82b7c89fb0eee93a1c
-    entity_id: light.garagel
-    domain: light
-  - type: turn_off
-    device_id: d8b7567e08c096b4d304dcb5b70d0335
-    entity_id: light.garager
-    domain: light
-  mode: single
-- id: '1633761277804'
-  alias: Morning Alarm
-  description: Send Webhook when morning Work alarm is disabled
-  trigger:
-  - platform: webhook
-    webhook_id: alarm20211010
-  condition: []
-  action:
-  - scene: scene.morning_work
-  mode: single
-- id: '1638059604866'
-  alias: Turn On Christmas Lights
-  description: ''
-  trigger:
-  - platform: sun
-    event: sunset
-    offset: '-35'
-  condition: []
-  action:
-  - type: turn_on
-    device_id: 5281d3bc61d08e3aa7041f0540acb092
-    entity_id: switch.wled_garage_switch
-    domain: switch
-  - type: turn_on
-    device_id: b73b622f464a9ebf798edd4f63157852
-    entity_id: switch.wled_window_switch
-    domain: switch
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 15
-      milliseconds: 0
-  - scene: scene.christmas
-  mode: single
-- id: '1638144567394'
-  alias: Sleep Time
-  description: ''
-  trigger:
-  - platform: time
-    at: '23:15:00'
-  condition: []
-  action:
-  - scene: scene.night
+  - scene: scene.sunrise
   mode: single
 - id: '1640560137721'
   alias: Doorbell
@@ -200,41 +134,97 @@
       motion_entity: binary_sensor.aqara_motion_sensor_occupancy
       light_target:
         device_id: 20d5d7cb30ac6372542d04e881afc7cd
-- id: '1640666070764'
-  alias: New Years
+      no_motion_wait: 242
+- id: '1641161831722'
+  alias: 'Sunset Lights '
   description: ''
   trigger:
-  - platform: time
-    at: input_datetime.new_year
+  - platform: sun
+    event: sunset
+    offset: '-15'
   condition: []
   action:
-  - device_id: e6a5453b6e2cb3a3f309817d00432e99
-    domain: select
-    entity_id: select.wled_garage_preset
-    type: select_option
-    option: New Years Countdown
-  - device_id: e04095a62b12beede38217328dc52760
-    domain: select
-    entity_id: select.wled_window_preset
-    type: select_option
-    option: New Years Countdown
+  - scene: scene.sunset
   mode: single
-- id: '1640666426457'
-  alias: New Years Countdown
+- id: '1641320792111'
+  alias: Tag Activate Sleep is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 3c7d13df-3ea3-436b-b896-f77976bbc07c
+  condition: []
+  action:
+  - scene: scene.sleep
+  mode: single
+- id: '1641403112639'
+  alias: Tag Office Lamp Tag is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 726abc05-030f-4efe-88c3-06f79717b291
+  condition: []
+  action:
+  - type: toggle
+    device_id: 20d5d7cb30ac6372542d04e881afc7cd
+    entity_id: light.office
+    domain: light
+  mode: single
+- id: '1641538213733'
+  alias: Aqara Magic Cube (Z2M)
+  description: ''
+  use_blueprint:
+    path: luckypoppy/z2m-xiaomi-cube-controller.yaml
+    input:
+      remote: sensor.aqara_cube_action
+      shake:
+      - type: toggle
+        device_id: 2391d4b99c1645ed27199951e9143406
+        entity_id: switch.living_room
+        domain: switch
+- id: '1641936119584'
+  alias: 'Someone at Door '
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: d97e516b46ac57f4fd053bb5d9b9da6e
+    entity_id: binary_sensor.aqara_motion_sensor_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_sm_g991u1
+    data:
+      message: Door!
+      title: Motion Detection
+  - type: toggle
+    device_id: 2391d4b99c1645ed27199951e9143406
+    entity_id: switch.living_room
+    domain: switch
+  - type: toggle
+    device_id: 20d5d7cb30ac6372542d04e881afc7cd
+    entity_id: light.office
+    domain: light
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - type: toggle
+    device_id: 2391d4b99c1645ed27199951e9143406
+    entity_id: switch.living_room
+    domain: switch
+  - type: toggle
+    device_id: 20d5d7cb30ac6372542d04e881afc7cd
+    entity_id: light.office
+    domain: light
+  mode: single
+- id: '1643610423725'
+  alias: Sleep
   description: ''
   trigger:
   - platform: time
-    at: input_datetime.new_years_countdown
+    at: 00:00:00
   condition: []
   action:
-  - device_id: e6a5453b6e2cb3a3f309817d00432e99
-    domain: select
-    entity_id: select.wled_garage_preset
-    type: select_option
-    option: New Years Countdown
-  - device_id: e04095a62b12beede38217328dc52760
-    domain: select
-    entity_id: select.wled_window_preset
-    type: select_option
-    option: New Years Countdown
+  - scene: scene.sleep
   mode: single

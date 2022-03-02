@@ -181,10 +181,61 @@
         device_id: 2391d4b99c1645ed27199951e9143406
         entity_id: switch.living_room
         domain: switch
-- id: '1641936119584'
-  alias: 'Someone at Door '
+- id: '1643610423725'
+  alias: Sleep
   description: ''
   trigger:
+  - platform: time
+    at: 00:00:00
+  - platform: state
+    entity_id: scene.sleep
+  condition: []
+  action:
+  - scene: scene.sleep
+  - service: automation.turn_on
+    data: {}
+    target:
+      entity_id: automation.new_automation
+  - service: notify.mobile_app_sm_g991u1
+    data:
+      message: Alarm Armed
+  mode: single
+- id: '1645164969169'
+  alias: Alarm
+  description: sensors turn on lights and notify
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 52e226e5dab339338e2053cdc5b074b0
+    entity_id: binary_sensor.aqara_guest_room_window_contact
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  - type: opened
+    platform: device
+    device_id: a6c26ab1de80d801bd3fc2c29bb4cf65
+    entity_id: binary_sensor.aqara_kitchen_door_sensor_contact
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  - type: opened
+    platform: device
+    device_id: fbdb7e6e6d35e20770defe138269085a
+    entity_id: binary_sensor.aqara_living_room_window_contact
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  - type: motion
+    platform: device
+    device_id: 3d6aa68c4d5d96258fbbd792fa63fb5c
+    entity_id: binary_sensor.wireless_motion_sensor_occupancy
+    domain: binary_sensor
   - type: motion
     platform: device
     device_id: d97e516b46ac57f4fd053bb5d9b9da6e
@@ -194,37 +245,74 @@
   action:
   - service: notify.mobile_app_sm_g991u1
     data:
-      message: Door!
-      title: Motion Detection
-  - type: toggle
+      message: Alarm
+  - type: turn_on
     device_id: 2391d4b99c1645ed27199951e9143406
     entity_id: switch.living_room
     domain: switch
-  - type: toggle
+  - type: turn_on
     device_id: 20d5d7cb30ac6372542d04e881afc7cd
     entity_id: light.office
     domain: light
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 1
-      milliseconds: 0
-  - type: toggle
-    device_id: 2391d4b99c1645ed27199951e9143406
-    entity_id: switch.living_room
-    domain: switch
-  - type: toggle
-    device_id: 20d5d7cb30ac6372542d04e881afc7cd
-    entity_id: light.office
-    domain: light
+    brightness_pct: 100
+  - service: media_player.volume_set
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.yamie
+  - service: media_player.turn_on
+    data: {}
+    target:
+      entity_id: media_player.yamie
+  - service: tts.google_translate_say
+    data:
+      entity_id: media_player.yamie
+      message: Alarm
   mode: single
-- id: '1643610423725'
-  alias: Sleep
+- id: '1645256644555'
+  alias: Offline detection for Z2M devices with last_seen
+  description: ''
+  use_blueprint:
+    path: Mr-Groch/offline-notification-for-sensors-with-last_seen.yaml
+    input:
+      time: 08:00:00
+      actions:
+      - service: notify.mobile_app_sm_g991u1
+        data:
+          message: Z2M sensor offline
+- id: '1645509455183'
+  alias: Disable Alarm (home)
   description: ''
   trigger:
-  - platform: time
-    at: 00:00:00
+  - platform: webhook
+    webhook_id: workalarm2022
+  - type: not_plugged_in
+    platform: device
+    device_id: 876e673f882199fbe64d4c0cc5ea2bb7
+    entity_id: binary_sensor.pixel_3_is_charging
+    domain: binary_sensor
+  condition:
+  - condition: zone
+    entity_id: person.benjitimate
+    zone: zone.home
+  action:
+  - service: automation.turn_off
+    data: {}
+    target:
+      entity_id: automation.new_automation
+  - service: notify.mobile_app_sm_g991u1
+    data:
+      message: Alarm Disabled
+      title: Home Assistant
+  mode: single
+- id: '1645944030427'
+  alias: Tag Activate Sleep is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 3c7d13df-3ea3-436b-b896-f77976bbc07c
   condition: []
   action:
-  - scene: scene.sleep
+  - service: script.1645165207161
+    data: {}
   mode: single

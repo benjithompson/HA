@@ -124,3 +124,8 @@ input_number:
     min: 1
     max: 60
     step: 1
+
+# Example configuration.yaml
+homeassistant:
+  media_dirs:
+    media: /media

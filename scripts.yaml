@@ -1,0 +1,10 @@
+'1645165207161':
+  sequence:
+  - scene: scene.sleep
+  - service: automation.turn_on
+    data: {}
+    target:
+      entity_id: automation.alarm
+  mode: single
+  alias: Enable Sleep Mode
+  icon: mdi:sleep

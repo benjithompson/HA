@@ -40,6 +40,7 @@ sensor:
   - platform: tautulli
     api_key: 709ed244cf484a738b15b1262bd6a33b
     host: 192.168.29.208
+    port: 8181
 
 # logger:
 #   default: info

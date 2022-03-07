@@ -41,32 +41,32 @@ sensor:
     api_key: 709ed244cf484a738b15b1262bd6a33b
     host: 192.168.29.208
 
-logger:
-  default: info
-  logs:
-    pydeconz: debug
-    homeassistant.components.deconz: debug
+# logger:
+#   default: info
+#   logs:
+#     pydeconz: debug
+#     homeassistant.components.deconz: debug
 
-influxdb:
-  host: a0d7b954-influxdb
-  port: 8086
-  database: homeassistant
-  username: homeassistant
-  password: homeassistant
-  max_retries: 3
-  default_measurement: state
+# influxdb:
+#   host: a0d7b954-influxdb
+#   port: 8086
+#   database: homeassistant
+#   username: homeassistant
+#   password: homeassistant
+#   max_retries: 3
+#   default_measurement: state
 
-  # Example filter to include specified domains and exclude specified entities
-  include:
-    # domains:
-    #   - alarm_control_panel
-    #   - light
-    entity_globs:
-      - sensor.6c_total_watts
-      - sensor.*
-    # exclude:
-    # entities:
-    #   - light.kitchen_light
+# Example filter to include specified domains and exclude specified entities
+#include:
+# domains:
+#   - alarm_control_panel
+#   - light
+#entity_globs:
+#- sensor.6c_total_watts
+#- sensor.*
+# exclude:
+# entities:
+#   - light.kitchen_light
 
 #cyberpower usage in watts (by default only has load percentage and nominal output which is 810watts total)
 template:

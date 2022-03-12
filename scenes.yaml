@@ -48,9 +48,14 @@
       supported_features: 32
       state: 'off'
     light.bethy_bulb:
+      min_mireds: 111
+      max_mireds: 400
       supported_color_modes:
       - brightness
-      friendly_name: Bethy
+      - color_temp
+      - hs
+      icon: mdi:lamp
+      friendly_name: Bethy Bulb
       supported_features: 32
       state: 'off'
     cover.garage_door:
@@ -92,6 +97,264 @@
     switch.salt_lamp_led:
       icon: mdi:led-off
       friendly_name: Salt Lamp LED
+      state: 'off'
+    light.wled_dig1:
+      effect_list:
+      - Android
+      - Aurora
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase 2
+      - Chase 3
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Dynamic Smooth
+      - Fade
+      - Fairy
+      - Fairytwinkle
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running Dual
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - TV Simulator
+      - Tetrix
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      supported_color_modes:
+      - rgbw
+      icon: mdi:led-strip-variant
+      friendly_name: WLED-DIG1
+      supported_features: 36
+      state: 'off'
+    number.wled_dig1_speed:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      icon: mdi:speedometer
+      friendly_name: WLED-DIG1 Speed
+      state: '4'
+    number.wled_dig1_intensity:
+      min: 0
+      max: 255
+      step: 1
+      mode: auto
+      friendly_name: WLED-DIG1 Intensity
+      state: '36'
+    select.wled_dig1_live_override:
+      options:
+      - '0'
+      - '1'
+      - '2'
+      device_class: wled__live_override
+      icon: mdi:theater
+      friendly_name: WLED-DIG1 Live Override
+      state: '0'
+    select.wled_dig1_playlist:
+      options: []
+      icon: mdi:play-speed
+      friendly_name: WLED-DIG1 Playlist
+      state: unavailable
+    select.wled_dig1_preset:
+      options:
+      - Office Flow
+      icon: mdi:playlist-play
+      friendly_name: WLED-DIG1 Preset
+      state: unknown
+    select.wled_dig1_color_palette:
+      options:
+      - '* Color 1'
+      - '* Color Gradient'
+      - '* Colors 1&2'
+      - '* Colors Only'
+      - '* Random Cycle'
+      - Analogous
+      - April Night
+      - Aqua Flash
+      - Atlantica
+      - Aurora
+      - Aurora 2
+      - Autumn
+      - Beach
+      - Beech
+      - Blink Red
+      - Breeze
+      - C9
+      - C9 2
+      - C9 New
+      - Candy
+      - Candy2
+      - Cloud
+      - Cyane
+      - Default
+      - Departure
+      - Drywet
+      - Fairy Reaf
+      - Fire
+      - Forest
+      - Grintage
+      - Hult
+      - Hult 64
+      - Icefire
+      - Jul
+      - Landscape
+      - Lava
+      - Light Pink
+      - Lite Light
+      - Magenta
+      - Magred
+      - Ocean
+      - Orange & Teal
+      - Orangery
+      - Party
+      - Pastel
+      - Pink Candy
+      - Rainbow
+      - Rainbow Bands
+      - Red & Blue
+      - Red Flash
+      - Red Reaf
+      - Red Shift
+      - Red Tide
+      - Retro Clown
+      - Rewhi
+      - Rivendell
+      - Sakura
+      - Semi Blue
+      - Sherbet
+      - Splash
+      - Sunset
+      - Sunset 2
+      - Temperature
+      - Tertiary
+      - Tiamat
+      - Toxy Reaf
+      - Vintage
+      - Yelblu
+      - Yelblu Hot
+      - Yellowout
+      - Yelmag
+      icon: mdi:palette-outline
+      friendly_name: WLED-DIG1 Color Palette
+      state: '* Color Gradient'
+    switch.wled_dig1_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      icon: mdi:weather-night
+      friendly_name: WLED-DIG1 Nightlight
+      state: 'off'
+    switch.wled_dig1_sync_send:
+      udp_port: 21324
+      icon: mdi:upload-network-outline
+      friendly_name: WLED-DIG1 Sync Send
+      state: 'off'
+    switch.wled_dig1_sync_receive:
+      udp_port: 21324
+      icon: mdi:download-network-outline
+      friendly_name: WLED-DIG1 Sync Receive
+      state: 'on'
+    switch.wled_dig1_reverse:
+      icon: mdi:swap-horizontal-bold
+      friendly_name: WLED-DIG1 Reverse
       state: 'off'
   icon: mdi:sleep
 - id: '1641162962861'

@@ -65,41 +65,6 @@
     discovery_id: 0x0008890001d9a85f action_bell1
   condition: []
   action:
-  - type: turn_on
-    device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door_light
-    domain: light
-    brightness_pct: 50
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 0
-      milliseconds: 500
-  - type: turn_on
-    device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door_light
-    domain: light
-    brightness_pct: 5
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 0
-      milliseconds: 500
-  - type: turn_on
-    device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door_light
-    domain: light
-    brightness_pct: 5
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 0
-      milliseconds: 500
-  - type: turn_on
-    device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door_light
-    domain: light
-    brightness_pct: 50
   - service: notify.persistent_notification
     data:
       message: Doorbell beep boop!
@@ -108,22 +73,6 @@
     data:
       message: Doorbell beep boop
       title: Home Assistant
-  - condition: sun
-    before: sunset
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 1
-      milliseconds: 0
-  - type: turn_on
-    device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door_light
-    domain: light
-    brightness_pct: 5
-  - type: turn_off
-    device_id: b46041f984bbf37d86d7e020bd09ee72
-    entity_id: light.front_door_light
-    domain: light
   mode: single
 - id: '1640647620411'
   alias: Office Light Motion Detected

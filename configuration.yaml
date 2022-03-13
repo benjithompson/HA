@@ -130,3 +130,13 @@ input_number:
 homeassistant:
   media_dirs:
     media: /media
+
+#Recorder - Settings for the History and Logbook integration - https://www.home-assistant.io/integrations/recorder/
+recorder:
+  purge_keep_days: 7
+  commit_interval: 3
+  exclude:
+    entity_globs:
+      - sensor.weather_*
+    entities:
+      - sun.sun # Don't record sun data

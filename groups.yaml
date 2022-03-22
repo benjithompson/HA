@@ -3,4 +3,5 @@ frontyard:
   entities:
     - light.zigbee_bulb_1
     - light.zigbee_bulb_2
-    - light.front_door
+    - light.zigbee_bulb_3
+    - light.zigbee_bulb_4

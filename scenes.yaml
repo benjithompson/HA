@@ -356,6 +356,10 @@
       icon: mdi:swap-horizontal-bold
       friendly_name: WLED-DIG1 Reverse
       state: 'off'
+    switch.garage_lights:
+      linkquality: 255
+      friendly_name: Garage Lights
+      state: 'off'
   icon: mdi:sleep
 - id: '1641162962861'
   name: Sunrise

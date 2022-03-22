@@ -218,6 +218,10 @@
     data:
       entity_id: media_player.yamie
       message: Alarm
+  - type: turn_on
+    device_id: bcc027987b0294bb3f8db793f2404ba2
+    entity_id: switch.garage_lights
+    domain: switch
   mode: single
 - id: '1645256644555'
   alias: Offline detection for Z2M devices with last_seen
@@ -241,6 +245,19 @@
     device_id: 876e673f882199fbe64d4c0cc5ea2bb7
     entity_id: binary_sensor.pixel_3_is_charging
     domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+  - type: not_plugged_in
+    platform: device
+    device_id: 38a475001ee99995deec77f6dddc6e4a
+    entity_id: binary_sensor.sm_g991u1_is_charging_2
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
   condition:
   - condition: zone
     entity_id: person.benjitimate
@@ -250,10 +267,6 @@
     data: {}
     target:
       entity_id: automation.new_automation
-  - service: notify.mobile_app_sm_g991u1
-    data:
-      message: Alarm Disabled
-      title: Home Assistant
   mode: single
 - id: '1645944030427'
   alias: Tag Activate Sleep is scanned
@@ -265,4 +278,63 @@
   action:
   - service: script.1645165207161
     data: {}
+  mode: single
+- id: '1647578948180'
+  alias: Motion-activated Garage Lights
+  description: ''
+  use_blueprint:
+    path: tteck/blueprint-motion-activated-switch.yaml
+    input:
+      motion_entity: binary_sensor.wireless_motion_sensor_occupancy
+      switch_target:
+        device_id: 72ef3a678242adf7c2fc8993ce0aea91
+      no_motion_wait: 1032
+- id: '1647579896323'
+  alias: Garage Door Turn on lights
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 4f2c40d594243b05054baae5d2e5786e
+    domain: cover
+    entity_id: cover.garage_door
+    type: opening
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 3
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 72ef3a678242adf7c2fc8993ce0aea91
+    entity_id: switch.garage_light_switch
+    domain: switch
+  mode: single
+- id: '1647906391907'
+  alias: Garage Door Turn off lights
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 4f2c40d594243b05054baae5d2e5786e
+    domain: cover
+    entity_id: cover.garage_door
+    type: closing
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  condition:
+  - type: is_no_motion
+    condition: device
+    device_id: 3d6aa68c4d5d96258fbbd792fa63fb5c
+    entity_id: binary_sensor.wireless_motion_sensor_occupancy
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
+  action:
+  - type: turn_off
+    device_id: 72ef3a678242adf7c2fc8993ce0aea91
+    entity_id: switch.garage_light_switch
+    domain: switch
   mode: single

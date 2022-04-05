@@ -91,7 +91,7 @@
   trigger:
   - platform: sun
     event: sunset
-    offset: '-15'
+    offset: '-16'
   condition: []
   action:
   - scene: scene.sunset

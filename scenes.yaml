@@ -14,9 +14,10 @@
       state: 'off'
     group.frontyard:
       entity_id:
-      - light.garagel
-      - light.garager
-      - light.front_door_light
+      - light.zigbee_bulb_1
+      - light.zigbee_bulb_2
+      - light.zigbee_bulb_3
+      - light.zigbee_bulb_4
       order: 0
       friendly_name: Entry Lights
       state: 'on'
@@ -34,6 +35,116 @@
       icon: mdi:led-off
       friendly_name: Salt Lamp LED
       state: 'off'
+    light.zigbee_bulb_3:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Back Yard Light
+      supported_features: 59
+      state: 'on'
+    light.zigbee_bulb_1:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      color:
+        h: 32
+        hue: 32
+        s: 82
+        saturation: 82
+        x: 0.4599
+        y: 0.4106
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Zigbee Bulb 1
+      supported_features: 59
+      state: 'on'
+    light.zigbee_bulb_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      color:
+        h: 32
+        hue: 32
+        s: 82
+        saturation: 82
+        x: 0.4599
+        y: 0.4106
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Zigbee Bulb 2
+      supported_features: 59
+      state: 'on'
+    light.zigbee_bulb_4:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Front Door Light
+      supported_features: 59
+      state: 'on'
   icon: mdi:weather-sunset-down
 - id: '1641162616778'
   name: Sleep
@@ -356,9 +467,10 @@
       icon: mdi:swap-horizontal-bold
       friendly_name: WLED-DIG1 Reverse
       state: 'off'
-    switch.garage_lights:
+    switch.garage_light_switch:
       linkquality: 255
-      friendly_name: Garage Lights
+      icon: mdi:lightbulb-fluorescent-tube
+      friendly_name: Garage Light Switch
       state: 'off'
   icon: mdi:sleep
 - id: '1641162962861'
@@ -366,10 +478,94 @@
   entities:
     group.frontyard:
       entity_id:
-      - light.garagel
-      - light.garager
-      - light.front_door_light
+      - light.zigbee_bulb_1
+      - light.zigbee_bulb_2
+      - light.zigbee_bulb_3
+      - light.zigbee_bulb_4
       order: 0
       friendly_name: Entry Lights
+      state: 'off'
+    light.zigbee_bulb_4:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Front Door Light
+      supported_features: 59
+      state: 'off'
+    light.zigbee_bulb_1:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 32
+        hue: 32
+        s: 82
+        saturation: 82
+        x: 0.4599
+        y: 0.4106
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Zigbee Bulb 1
+      supported_features: 59
+      state: 'off'
+    light.zigbee_bulb_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 32
+        hue: 32
+        s: 82
+        saturation: 82
+        x: 0.4599
+        y: 0.4106
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Zigbee Bulb 2
+      supported_features: 59
+      state: 'off'
+    light.zigbee_bulb_3:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      linkquality: 255
+      icon: mdi:coach-lamp
+      friendly_name: Back Yard Light
+      supported_features: 59
+      state: 'off'
+    switch.string_lights:
+      friendly_name: Cabana
+      state: 'off'
+    switch.outside_plug:
+      icon: mdi:string-lights
+      friendly_name: Xmas Yard
+      state: 'off'
+    switch.tp_link_smart_plug_30c0_led:
+      icon: mdi:led-off
+      friendly_name: TP-LINK_Smart Plug_30C0 LED
+      state: 'off'
+    switch.salt_lamp:
+      friendly_name: Salt Lamp
+      state: 'off'
+    switch.salt_lamp_led:
+      icon: mdi:led-off
+      friendly_name: Salt Lamp LED
+      state: 'off'
+    switch.living_room:
+      friendly_name: Living Room
+      state: 'off'
+    switch.living_room_led:
+      icon: mdi:led-off
+      friendly_name: Living Room LED
       state: 'off'
   icon: mdi:weather-sunset-up

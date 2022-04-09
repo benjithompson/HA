@@ -248,7 +248,7 @@
     for:
       hours: 0
       minutes: 0
-      seconds: 10
+      seconds: 0
   - type: not_plugged_in
     platform: device
     device_id: 38a475001ee99995deec77f6dddc6e4a
@@ -257,16 +257,13 @@
     for:
       hours: 0
       minutes: 0
-      seconds: 10
-  condition:
-  - condition: zone
-    entity_id: person.benjitimate
-    zone: zone.home
+      seconds: 1
+  condition: []
   action:
   - service: automation.turn_off
     data: {}
     target:
-      entity_id: automation.new_automation
+      entity_id: automation.alarm
   mode: single
 - id: '1645944030427'
   alias: Tag Activate Sleep is scanned
@@ -287,7 +284,8 @@
     input:
       motion_entity: binary_sensor.wireless_motion_sensor_occupancy
       switch_target:
-        device_id: 72ef3a678242adf7c2fc8993ce0aea91
+        entity_id:
+        - switch.garage_light_switch
       no_motion_wait: 1032
 - id: '1647579896323'
   alias: Garage Door Turn on lights

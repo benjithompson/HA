@@ -140,3 +140,11 @@ recorder:
       - sensor.weather_*
     entities:
       - sun.sun # Don't record sun data
+
+# Example configuration.yaml entry
+plant:
+  office_plant:
+    sensors:
+      conductivity: sensor.soil_sensor
+    min_conductivity: 5
+    max_conductivity: 99
